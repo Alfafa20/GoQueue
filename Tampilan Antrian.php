@@ -11,7 +11,7 @@
 
 <?php
 
-session_start();
+session_start(); //Data yang di input pada page sebelumnya
 if($_SERVER['REQUEST_METHOD'] == 'POST'){
     $_SESSION['loket'] = $_POST['loket'];
     $_SESSION['operator'] = $_POST['operator'];
@@ -19,11 +19,6 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
     $_SESSION['antrian'] = $_POST['antrian'];
 
 }
-
-$akhir = $_SESSION['antrian'];
-$awal = 1;
-
-
 ?>
 
 <?php
@@ -35,19 +30,29 @@ $awal = 1;
 
 
 
-    <div class="info">
+    <div class="info"> <!-- Bagian yang akan di tampilkan -->
        <h1 class="nama"><?php echo $_SESSION['loket']; ?></h1>
        <hr>
-       <h3><?php echo $_SESSION['operator']; ?></h3>
+       <h1><?php echo $_SESSION['operator']; ?></h1>
        <br>
        <br>
       
        
        <h3>Nomor Antrian</h3>
        <h1><?php echo $_SESSION['kode']?> - <span id="angka"><?php echo $angka_awal; ?></span></h1>
-	<div class="selanjutnya"><a id="tombol" onclick="tambahAngka()"><img class="kanan" src="kanan.png" alt="Selanjutnya">Selanjutnya</a>
+	<div class="fungsi">
+        <a id="tombol" onclick="tambahAngka()"><img class="gambar" src="kanan.png" alt="Selanjutnya">Selanjutnya</a>
+        <a id="tombol" onclick="play()"><img class="gambar" src="audio.jpeg" alt="panggil">Panggil</a>
+        <audio id="audio" src="Bel panggilan.mpeg"></audio>
 </div>
-	<script>
+
+          
+
+	<script> //Bagian Fungsi
+        function play() {
+            document.getElementById("audio").play();
+        }
+
 		function tambahAngka() {
 			var angka = document.getElementById("angka").innerHTML;
 			var hasil = parseInt(angka) + 1;
@@ -61,6 +66,8 @@ $awal = 1;
 		function pindahHalaman() {
 			window.location.href = "selesai.html";
 		}
+
+        
 	</script>
        
     </div>
@@ -73,10 +80,12 @@ $awal = 1;
         justify-content: center;
         flex-direction: column;
         align-items: center;
+        background: #284B34;
+
     }
 
     .info{
-        background-color: pink;
+        background-color: #BED7C9;
         margin: 5px;
         display: flex;
         flex-direction: column;
@@ -96,33 +105,28 @@ $awal = 1;
         width: 170px;
     }
 
-
-    a:hover{
-        box-shadow: 4px;
-    }
-
     #tombol{
     display: flex;
     justify-content: space-around;
     align-items: center;
-    background-color: pink;
+    background-color: #BED7C9;
     padding: 0%;
     flex-direction: column;
     height: 100px;
     }
     
-    .kanan{
+    .gambar{
     border-radius: 100%;
     width: 50px;
     }
 
-    .selanjutnya{
+    .fungsi{
     display: flex;
-    flex-direction: column;
-    justify-content: end;
+    flex-direction: row-reverse;
+    justify-content: space-around;
     margin-bottom: 25%;
     margin-top: auto;
-    justify-self: end;
+    width: 500px;
     }
 </style>
 

@@ -8,17 +8,28 @@
     <link rel="icon" type="image/x-icon" href="Logo.jpg">
 </head>
 <body>
-    <div>
+    <div class="tampilan"><!-- Bagian yang akan di tampilkan -->
+        <div>
+            <h1>ANTRIAN TELAH SELESAI</h1>
+        </div>
         <div class="foto">
             <img src="icon centang hitam.png" alt="Cheklist selesai">
         </div>
-        <br>
         <div class="tombol">
             <a class="selesai" href="Halaman Awal.html">Selesai</a>
         </div>
     </div>
 
     <style>
+       .tampilan{
+        display: flex;
+        flex-direction: column;
+        align-content: space-around;
+        height: 60%;
+        margin-top: auto;
+        margin-bottom: auto;
+       }
+
        body{
         margin: 0%;
         height: 100vh;
@@ -26,16 +37,21 @@
         flex-direction: column;
         justify-items: center;
         align-items: center;
+        background: #BED7C9;
+
        }
 
        .foto{
-        margin-top: 40%;
         margin-bottom: auto;
+        display: flex;
+        justify-content: center;
        }
 
        img{
         width: 200px;
         border-radius: 100%;
+        background-color: #BED7C9;
+
 
        }
 
@@ -51,11 +67,13 @@
         justify-content: center;
         text-decoration: none;
         font-size: larger;
-        background-color: grey;
+        background-color: #284B34;
         border-radius: 25px;
         color: white;
         padding: 7px;
-        width: 100px;
+        width: 200px;
+        font-size: 30px;
+        
        }
     </style>
 </body>

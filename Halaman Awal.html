@@ -9,20 +9,20 @@
 </head>
 
 <body>
-    <div class="badan">
+    <div class="badan"><!-- Bagian Header -->
         <div class="header">
             <img src="Logo.jpg" alt="">
             <h1>Welcome To GoQueue</h1>
             
         </div>
         
-        <div class="konten">
-           <div class="isi">Pengembang<br> <br> Selamat datang di GoQueue, Nikmati fitur yang sudah disediakan oleh GoQueue untuk memenuhi kebutuhan anda sehari hari dimana pun dan kapanpun</div>
+        <div class="konten"><!-- Bagian Isi -->
+           <div class="isi">Pesan Pengembang<br> <br> Selamat datang di GoQueue, Nikmati fitur yang sudah disediakan oleh GoQueue untuk memenuhi kebutuhan anda sehari hari dimana pun dan kapanpun.</div>
            <div class="isi">Tujuan <br> <br>GoQueue merupakan web pengembang untuk memanggil nomor antrian dengan fitur yang cukup simple dan mudah.</div>
-           <div class="isi">Kredit <br> <br>GoQueue diciptakan pada tanggal 1 Februari dan di resmikan pada tanggal NONE oleh beberapa siswa SMKN 69 Jakarta untuk memenuhi projek dari Institut kemandirian & smarteschool.</div>
+           <div class="isi">Kredit <br> <br>GoQueue diciptakan pada tanggal 1 Februari dan di resmikan pada tanggal 20 Februari oleh beberapa siswa SMKN 69 Jakarta untuk memenuhi projek dari Institut kemandirian & smarteschool.</div>
         </div>
         
-       <div class="mulai">
+       <div class="mulai"><!-- Bagian Tombol -->
         <a href="Halaman daftar.html">Mulai</a>
        </div>
     </div>
@@ -34,11 +34,12 @@
 <style>
     .header{
      height: 25%;
-     background-color: pink;
+     background-color: #BED7C9;
+;
      margin: 0%;
      display: flex;
      flex-direction: row;
-     text-decoration: underline;
+     text-decoration: none;
      padding-left: 30px;
      justify-content: start;
      align-content: center;
@@ -49,6 +50,8 @@
      margin: 0%;
      display: flex;
      flex-direction: column;
+     background: #284B34;
+
 
     }
 
@@ -57,7 +60,6 @@
         flex-direction: row;
         justify-content: space-around;
         align-content: start;
-        background-color: rgb(255, 255, 255);
         justify-self: center;
         margin-top: 20px;
         margin-bottom: 20px;
@@ -68,21 +70,29 @@
     }
 
     .isi{
-        padding: 10px;
+        padding: 15px;
         border: 5px;
-        background-color: rgb(155, 255, 152);
+        background-color: #BED7C9;
+        border-radius: 25px;
         width: 25%;
+        box-shadow: -20px 20px 0px rgb(0, 0, 0);
         
     }
 
     a{
         text-decoration: none;
         color: black;
-        background-color: grey;
+        background-color: #BED7C9;
         padding: 20px;
         width: 300px;
         display: flex;
         justify-content: center;
+        border-radius: 50px;
+    }
+
+    a:hover{
+        box-shadow: -20px 20px 0px rgb(0, 0, 0);
+        transition: 0.5s;
     }
 
     .mulai{
