@@ -7,11 +7,10 @@
     <title>GoQueue</title>
     <link rel="icon" type="image/x-icon" href="Logo.jpg">
 </head>
-<body>
 
 <?php
 
-session_start(); //Data yang di input pada page sebelumnya
+ //Data yang di input pada page sebelumnya
 if($_SERVER['REQUEST_METHOD'] == 'POST'){
     $_SESSION['loket'] = $_POST['loket'];
     $_SESSION['operator'] = $_POST['operator'];
@@ -20,6 +19,10 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
 
 }
 ?>
+
+<body>
+
+
 
 <?php
 		$angka_awal = 1; // Angka awal yang ingin ditampilkan
